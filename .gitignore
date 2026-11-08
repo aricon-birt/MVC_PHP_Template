@@ -1,4 +1,9 @@
-# Dependencias de Composer: se regeneran con "composer install"
+# [TA6-5] .gitignore: rutas que Git NO debe controlar.
+# La "/" inicial = desde la raíz del repositorio.
+
+# Dependencias de Composer: se regeneran con "composer install".
+# Se ignora el CONTENIDO (/*), no la carpeta, para poder hacer la excepción:
+# el "!" vuelve a incluir .gitkeep y así la carpeta existe en GitHub.
 /vendor/*
 !/vendor/.gitkeep
 
@@ -6,6 +11,6 @@
 /logs/*
 !/logs/.gitkeep
 
-# Credenciales reales (nunca a GitHub)
+# Credenciales reales: NUNCA al repositorio
 /config/config.local.php
 .env
